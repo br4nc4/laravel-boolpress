@@ -54,6 +54,19 @@
                 </div>
 
                 <div class="form-group">
+                    <label>Tags</label>
+                    <select type="text" name="tags[]" class="form-control @error('tags') is-invalid @enderror" multiple>
+                        @foreach ($tags as $tag)
+                        <option value="{{ $tag->id }}">
+                            {{ $tag->name }}</option>
+                        @endforeach
+                    </select>
+                    @error('tags')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                <div class="form-group">
                     <label>Contenuto</label>
                     <textarea name="content" class="form-control @error('content') is-invalid @enderror" rows="10" placeholder="Inizia a scrivere qualcosa..." required>{{ old('content') }}</textarea>
                     @error('content')
