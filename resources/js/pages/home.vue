@@ -1,13 +1,13 @@
 <template>
     <div>
         <div class="container">
-            <img src="" alt="">
+            <img src="images/wallpaperboolpress.jpg" alt="">
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        
+
     }
 </script>

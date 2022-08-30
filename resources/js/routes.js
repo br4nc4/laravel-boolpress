@@ -1,5 +1,3 @@
-import VueRouter from "vue-router"
-
 import Home from "./pages/home.vue"
 import Contacts from "./pages/contacts.vue"
 import Posts from "./pages/posts.vue"

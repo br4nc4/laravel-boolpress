@@ -1909,13 +1909,10 @@ module.exports = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _frontend_components_Navbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./frontend/components/Navbar.vue */ "./resources/js/frontend/components/Navbar.vue");
-/* harmony import */ var _frontend_components_PostList_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./frontend/components/PostList.vue */ "./resources/js/frontend/components/PostList.vue");
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    Navbar: _frontend_components_Navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    PostList: _frontend_components_PostList_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+    Navbar: _frontend_components_Navbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {};
@@ -2006,7 +2003,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony import */ var _frontend_components_PostList_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../frontend/components/PostList.vue */ "./resources/js/frontend/components/PostList.vue");
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    PostList: _frontend_components_PostList_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  }
+});
 
 /***/ }),
 
@@ -2040,7 +2043,7 @@ var render = function render() {
 
   return _c("div", [_c("Navbar"), _vm._v(" "), _c("div", {
     staticClass: "container"
-  }, [_c("h2", [_vm._v("Lista Post")]), _vm._v(" "), _c("PostList")], 1)], 1);
+  }, [_c("router-view")], 1)], 1);
 };
 
 var staticRenderFns = [];
@@ -2240,7 +2243,7 @@ var staticRenderFns = [function () {
     staticClass: "container"
   }, [_c("img", {
     attrs: {
-      src: "",
+      src: "images/wallpaperboolpress.jpg",
       alt: ""
     }
   })])]);
@@ -2265,17 +2268,12 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm._m(0);
-};
-
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
   return _c("div", [_c("div", {
     staticClass: "container"
-  })]);
-}];
+  }, [_c("h2", [_vm._v("Lista Post")]), _vm._v(" "), _c("PostList")], 1)]);
+};
+
+var staticRenderFns = [];
 render._withStripped = true;
 
 
@@ -19047,31 +19045,29 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var _pages_home_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/home.vue */ "./resources/js/pages/home.vue");
-/* harmony import */ var _pages_contacts_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/contacts.vue */ "./resources/js/pages/contacts.vue");
-/* harmony import */ var _pages_posts_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/posts.vue */ "./resources/js/pages/posts.vue");
-/* harmony import */ var _pages_posts_show_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/posts/show.vue */ "./resources/js/pages/posts/show.vue");
-
+/* harmony import */ var _pages_home_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/home.vue */ "./resources/js/pages/home.vue");
+/* harmony import */ var _pages_contacts_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/contacts.vue */ "./resources/js/pages/contacts.vue");
+/* harmony import */ var _pages_posts_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/posts.vue */ "./resources/js/pages/posts.vue");
+/* harmony import */ var _pages_posts_show_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/posts/show.vue */ "./resources/js/pages/posts/show.vue");
 
 
 
 
 var routes = [{
   path: "/",
-  component: _pages_home_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+  component: _pages_home_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
   name: "home"
 }, {
   path: "/contatti",
-  component: _pages_contacts_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+  component: _pages_contacts_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
   name: "contacts"
 }, {
   path: "/posts",
-  component: _pages_posts_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+  component: _pages_posts_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
   name: "posts"
 }, {
   path: "/posts/idpost",
-  component: _pages_posts_show_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+  component: _pages_posts_show_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
   name: "posts.show"
 }];
 /* export default new VueRouter({
