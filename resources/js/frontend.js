@@ -9,6 +9,7 @@ new Vue({
     el: '#app',
     render: h => h(Frontend),
     router: new VueRouter({
-        routes
+        routes,
+        mode: "history"
     })
 })

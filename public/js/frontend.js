@@ -18596,7 +18596,8 @@ new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
     return h(_Frontend_vue__WEBPACK_IMPORTED_MODULE_1__["default"]);
   },
   router: new vue_router__WEBPACK_IMPORTED_MODULE_2__["default"]({
-    routes: _routes__WEBPACK_IMPORTED_MODULE_3__["routes"]
+    routes: _routes__WEBPACK_IMPORTED_MODULE_3__["routes"],
+    mode: "history"
   })
 });
 
