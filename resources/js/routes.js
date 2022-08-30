@@ -7,7 +7,7 @@ export const routes =[
     {path: "/", component: Home, name:"home"},
     {path: "/contatti", component: Contacts, name:"contacts"},
     {path: "/posts", component: Posts, name:"posts"},
-    {path: "/posts/idpost", component: PostShow, name:"posts.show"},
+    {path: "/posts/:slug", component: PostShow, name:"posts.show"},
 ];
 
 /* export default new VueRouter({

@@ -2186,12 +2186,17 @@ var render = function render() {
       domProps: {
         innerHTML: _vm._s(post.content)
       }
-    }), _vm._v(" "), _c("a", {
+    }), _vm._v(" "), _c("router-link", {
       staticClass: "btn btn-primary",
       attrs: {
-        href: "#"
+        to: {
+          name: "posts.show",
+          params: {
+            slug: post.slug
+          }
+        }
       }
-    }, [_vm._v("Details")])])])]);
+    }, [_vm._v("Details")])], 1)])]);
   }), 0);
 };
 
@@ -19136,7 +19141,7 @@ var routes = [{
   component: _pages_posts_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
   name: "posts"
 }, {
-  path: "/posts/idpost",
+  path: "/posts/:slug",
   component: _pages_posts_show_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
   name: "posts.show"
 }];
