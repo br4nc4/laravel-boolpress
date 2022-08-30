@@ -2052,7 +2052,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     var _this = this;
 
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("api/posts/" + this.$route.params.slug).then(function (resp) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/posts/" + this.$route.params.slug).then(function (resp) {
       var data = resp.data;
       _this.post = data;
     });
@@ -2385,17 +2385,12 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm._m(0);
-};
-
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
   return _c("div", [_c("div", {
     staticClass: "container"
-  }, [_c("h2", [_vm._v("Dettagli Post")])])]);
-}];
+  }, [_c("h2", [_vm._v("Dettagli Post " + _vm._s(_vm.post.id))]), _vm._v(" "), _c("div", [_vm._v("Titolo: " + _vm._s(_vm.post.title))]), _vm._v(" "), _c("div", [_vm._v("Data creazione: " + _vm._s(_vm.post.created_at))])])]);
+};
+
+var staticRenderFns = [];
 render._withStripped = true;
 
 

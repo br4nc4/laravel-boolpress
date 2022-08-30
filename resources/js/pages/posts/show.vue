@@ -1,7 +1,10 @@
 <template>
     <div>
         <div class="container">
-            <h2>Dettagli Post</h2>
+            <h2>Dettagli Post {{post.id}}</h2>
+
+            <div>Titolo: {{post.title}}</div>
+            <div>Data creazione: {{post.created_at}}</div>
         </div>
     </div>
 </template>
@@ -16,7 +19,7 @@ import axios from 'axios';
             }
         },
         mounted() {
-            axios.get("api/posts/" + this.$route.params.slug)
+            axios.get("/api/posts/" + this.$route.params.slug)
             .then((resp) => {
                 const data = resp.data;
                 this.post = data;
