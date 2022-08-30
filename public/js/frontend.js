@@ -2387,7 +2387,11 @@ var render = function render() {
 
   return _c("div", [_c("div", {
     staticClass: "container"
-  }, [_c("h2", [_vm._v("Dettagli Post " + _vm._s(_vm.post.id))]), _vm._v(" "), _c("div", [_vm._v("Titolo: " + _vm._s(_vm.post.title))]), _vm._v(" "), _c("div", [_vm._v("Data creazione: " + _vm._s(_vm.post.created_at))])])]);
+  }, [_c("h2", [_vm._v("Dettagli POST #" + _vm._s(_vm.post.id))]), _vm._v(" "), _c("div", [_vm._v("Titolo: " + _vm._s(_vm.post.title))]), _vm._v(" "), _c("div", [_vm._v("Scritto da: " + _vm._s(_vm.post.user.name))]), _vm._v(" "), _c("div", [_vm._v("Data creazione: " + _vm._s(_vm.post.created_at))]), _vm._v(" "), _vm.post.category ? _c("div", [_vm._v("Categoria: " + _vm._s(_vm.post.category.name))]) : _vm._e(), _vm._v(" "), _vm.post.tags.length > 0 ? _c("div", [_c("span", [_vm._v("Tags:")]), _vm._v(" "), _vm._l(_vm.post.tags, function (tag) {
+    return _c("span", {
+      key: tag.id
+    }, [_vm._v(_vm._s(tag.name) + ", ")]);
+  })], 2) : _vm._e()])]);
 };
 
 var staticRenderFns = [];
