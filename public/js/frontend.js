@@ -2069,11 +2069,8 @@ var render = function render() {
 
   return _c("div", [_c("nav", {
     staticClass: "navbar navbar-expand-lg navbar-light bg-light"
-  }, [_c("a", {
-    staticClass: "navbar-brand",
-    attrs: {
-      href: "/"
-    }
+  }, [_c("div", {
+    staticClass: "navbar-brand"
   }, [_vm._v("Boolpress")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c("div", {
     staticClass: "collapse navbar-collapse",
     attrs: {
@@ -2210,7 +2207,7 @@ var staticRenderFns = [function () {
 
   return _c("div", [_c("div", {
     staticClass: "container"
-  }, [_c("h2", [_vm._v("Contatti")])])]);
+  }, [_c("h2", [_vm._v("Contattaci")])])]);
 }];
 render._withStripped = true;
 
@@ -2241,7 +2238,9 @@ var staticRenderFns = [function () {
 
   return _c("div", [_c("div", {
     staticClass: "container"
-  }, [_c("img", {
+  }, [_c("div", {
+    staticClass: "text-center"
+  }, [_c("h1", [_vm._v("FAKE")])]), _vm._v(" "), _c("img", {
     attrs: {
       src: "images/wallpaperboolpress.jpg",
       alt: ""
