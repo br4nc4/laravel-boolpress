@@ -8,6 +8,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-item nav-link active" href="/admin">Admin</a>
+                    <router-link :to="{name: 'home'}">Home</router-link>
+                    <router-link :to="{name: 'posts'}">Posts</router-link>
+                    <router-link :to="{name: 'contacts'}">Contatti</router-link>
                 </div>
             </div>
         </nav>
